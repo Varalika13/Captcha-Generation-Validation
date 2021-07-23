@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/mike_kuss/pen/XRomEK">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    body {
+  display: -webkit-box;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background: #ef476f;
+}
+
+.text {
+  color: #423c4f;
+  font-family: "Arial";
+  font-weight: 900;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.text > p {
+  -webkit-animation-name: text;
+          animation-name: text;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.text p:first-child {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.text p:last-child {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes text {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-65%);
+            transform: translateX(-65%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-15%);
+            transform: translateX(-15%);
+  }
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-65%);
+            transform: translateX(-65%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-15%);
+            transform: translateX(-15%);
+  }
+}
+
+.beam {
+  position: absolute;
+  display: block;
+  /* is inline element */
+  height: 8px;
+  width: 33px;
+  background: #ffd166;
+  -webkit-animation-name: beam;
+          animation-name: beam;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: inherit;
+          animation-delay: inherit;
+  opacity: 0;
+  border-radius: 5px;
+}
+
+.sun .light {
+  position: absolute;
+  display: block;
+  /* is inline element */
+  height: 4px;
+  width: 40px;
+  left: 50%;
+  top: 50%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.sun .light1 {
+  -webkit-transform: translateY(-45px) rotate(-90deg);
+          transform: translateY(-45px) rotate(-90deg);
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.sun .light2 {
+  -webkit-transform: translateY(-30px) translateX(30px) rotate(-45deg);
+          transform: translateY(-30px) translateX(30px) rotate(-45deg);
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.sun .light3 {
+  -webkit-transform: translateX(45px) rotate(0deg);
+          transform: translateX(45px) rotate(0deg);
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.sun .light4 {
+  -webkit-transform: translateY(30px) translateX(30px) rotate(45deg);
+          transform: translateY(30px) translateX(30px) rotate(45deg);
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.sun .light5 {
+  -webkit-transform: translateY(45px) rotate(90deg);
+          transform: translateY(45px) rotate(90deg);
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+.sun .light6 {
+  -webkit-transform: translateY(30px) translateX(-30px) rotate(135deg);
+          transform: translateY(30px) translateX(-30px) rotate(135deg);
+}
+
+.sun .light7 {
+  -webkit-transform: translateX(-45px) rotate(180deg);
+          transform: translateX(-45px) rotate(180deg);
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.sun .light8 {
+  -webkit-transform: translateY(-30px) translateX(-30px) rotate(225deg);
+          transform: translateY(-30px) translateX(-30px) rotate(225deg);
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+@-webkit-keyframes beam {
+  0% {
+    -webkit-transform: scaleX(0) translateX(-100%);
+            transform: scaleX(0) translateX(-100%)
+  }
+  100% {
+    -webkit-transform: scaleX(1) translateX(0);
+            transform: scaleX(1) translateX(0);
+    opacity: 1
+  }
+}
+
+@keyframes beam {
+  0% {
+    -webkit-transform: scaleX(0) translateX(-100%);
+            transform: scaleX(0) translateX(-100%)
+  }
+  100% {
+    -webkit-transform: scaleX(1) translateX(0);
+            transform: scaleX(1) translateX(0);
+    opacity: 1
+  }
+}
+
+.sun {
+  width: 66px;
+  height: 66px;
+  position: relative;
+  border-radius: 100%;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+          animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translateX(-150%) rotate(128deg);
+            transform: translateX(-150%) rotate(128deg);
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0)
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translateX(-150%) rotate(128deg);
+            transform: translateX(-150%) rotate(128deg);
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0)
+  }
+}
+
+#halfclip {
+  width: 50%;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  overflow: hidden;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-animation: cliprotate 1.5s steps(2);
+          animation: cliprotate 1.5s steps(2);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.halfcircle {
+  box-sizing: border-box;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  border: solid 7px transparent;
+  border-top-color: #ffd166;
+  border-left-color: #ffd166;
+  border-radius: 50%;
+}
+
+#clipped {
+  width: 200%;
+  -webkit-animation: rotate2 .75s linear 2 forwards;
+          animation: rotate2 .75s linear 2 forwards;
+}
+
+#fixed {
+  width: 100%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-animation: showfixed 1.5s steps(2) forwards;
+          animation: showfixed 1.5s steps(2) forwards;
+}
+
+@-webkit-keyframes cliprotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes cliprotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@-webkit-keyframes showfixed {
+  0% {
+    opacity: 0;
+  }
+  49.9% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showfixed {
+  0% {
+    opacity: 0;
+  }
+  49.9% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+  </style>
+
+  
+<script src="https://static.codepen.io/assets/editor/iframe/iframeConsoleRunner-7f4d47902dc785f30dedcac9c996b9f31d4dfcc33567cc48f0431bc918c2bf05.js"></script>
+<script src="https://static.codepen.io/assets/editor/iframe/iframeRefreshCSS-e03f509ba0a671350b4b363ff105b2eb009850f34a2b4deaadaa63ed5d970b37.js"></script>
+<script src="https://static.codepen.io/assets/editor/iframe/iframeRuntimeErrors-29f059e28a3c6d3878960591ef98b1e303c1fe1935197dae7797c017a3ca1e82.js"></script>
+
+</head>
+
+<body>
+  <div class="text">
+  <p>Good</p>
+  <p>Morning</p>
+  <p>Varu</p>
+</div>
+<div class="sun">
+  <div id="halfclip">
+    <div class="halfcircle" id="clipped">
+    </div>
+  </div>
+  <div class="halfcircle" id="fixed"></div>
+  <span class="light light1"><span class="beam"></span></span>
+  <span class="light light2"><span class="beam"></span></span>
+  <span class="light light3"><span class="beam"></span></span>
+  <span class="light light4"><span class="beam"></span></span>
+  <span class="light light5"><span class="beam"></span></span>
+  <span class="light light6"><span class="beam"></span></span>
+  <span class="light light7"><span class="beam"></span></span>
+  <span class="light light8"><span class="beam"></span></span>
+</div>
+  
+  
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+  <script id="INLINE_PEN_JS_ID">
+    
+    //# sourceURL=pen.js
+  </script>
+</body>
+
+</html>
